@@ -1,6 +1,6 @@
 package com.minipay.application;
 
-import com.minipay.domain.TransactionService;
+import com.minipay.domain.TransferService;
 import com.minipay.domain.UserRepository;
 
 import java.math.BigDecimal;
@@ -16,7 +16,7 @@ public class TransferUseCase {
     public void execute(final Input input) {
         final var payee = userRepository.get(input.payeeId).orElseThrow();
         final var payer = userRepository.get(input.payerId).orElseThrow();
-        TransactionService.performDebitCredit(payer, payee, BigDecimal.valueOf(input.amount));
+        TransferService.performDebitCredit(payer, payee, BigDecimal.valueOf(input.amount));
         userRepository.save(payee);
         userRepository.save(payer);
     }
