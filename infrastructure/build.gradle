@@ -1,9 +1,20 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.flywaydb:flyway-database-postgresql:10.11.0"
+
+    }
+}
+
 plugins {
     id 'java-conventions'
     id 'jacoco-report-aggregation'
     id 'application'
     id 'org.springframework.boot' version '3.2.2'
     id 'io.spring.dependency-management' version '1.1.4'
+    id 'org.flywaydb.flyway' version '10.11.0'
 }
 
 group = 'com.minipay.infrastructure'
@@ -84,6 +95,12 @@ dependencyManagement {
         mavenBom "io.github.resilience4j:resilience4j-bom:2.2.0"
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:2023.0.0"
     }
+}
+
+flyway {
+    url = System.getenv('FLYWAY_DB') ?: 'jdbc:postgresql://127.0.0.1:5432/minipay_db'
+    user = System.getenv('FLYWAY_USER') ?: 'admin'
+    password = System.getenv('FLYWAY_PASS') ?: '123'
 }
 
 testCodeCoverageReport {

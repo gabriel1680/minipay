@@ -6,7 +6,7 @@ server:
       io: 2
 spring:
   datasource:
-    url: jdbc:postgresql://${postgres.url}/${postgres.database}?ssmode=allow
+    url: jdbc:postgresql://${postgres.url}/${postgres.database}?sslmode=allow
 
 # override prod configurations
 postgres:
