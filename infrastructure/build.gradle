@@ -4,7 +4,6 @@ buildscript {
     }
     dependencies {
         classpath "org.flywaydb:flyway-database-postgresql:10.11.0"
-
     }
 }
 
@@ -80,6 +79,9 @@ dependencies {
     testImplementation("org.springframework.graphql:spring-graphql-test")
     testImplementation("org.springframework.kafka:spring-kafka-test")
     testImplementation("org.springframework.security:spring-security-test")
+
+    // flyway
+    testImplementation('org.flywaydb:flyway-core')
 
     // test container
     testImplementation("org.testcontainers:testcontainers:1.18.3")
