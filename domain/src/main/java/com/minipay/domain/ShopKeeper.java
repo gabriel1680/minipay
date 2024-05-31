@@ -3,22 +3,22 @@ package com.minipay.domain;
 import java.math.BigDecimal;
 
 public class ShopKeeper extends User {
-
-    public ShopKeeper(Integer id, String name, UserCredentials credentials, String document) {
-        super(id, name, credentials, document);
-    }
-
-    public ShopKeeper(Integer id, String name, UserCredentials credentials, String document, Wallet wallet) {
+    public ShopKeeper(Integer id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
         super(id, name, credentials, document, wallet);
     }
 
+    public ShopKeeper(Integer id, String name, UserCredentials credentials, UserDocument document) {
+        super(id, name, credentials, document);
+    }
+
     @Override
-    public String getDocumentType() {
-        return "cnpj";
+    public String getType() {
+        return "lojista";
     }
 
     @Override
     public void credit(BigDecimal aValue) {
+        // Brakes Liskov Substitution
         throw new RuntimeException("A shopkeeper cannot credit");
     }
 

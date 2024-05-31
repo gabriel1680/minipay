@@ -6,10 +6,10 @@ public abstract class User {
     private Integer id;
     private String name;
     private UserCredentials credentials;
-    private String document;
+    private UserDocument document;
     protected Wallet wallet;
 
-    public User(Integer id, String name, UserCredentials credentials, String document, Wallet wallet) {
+    public User(Integer id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
         this.id = id;
         this.name = name;
         this.credentials = credentials;
@@ -17,7 +17,7 @@ public abstract class User {
         this.wallet = wallet;
     }
 
-    public User(Integer id, String name, UserCredentials credentials, String document) {
+    public User(Integer id, String name, UserCredentials credentials, UserDocument document) {
         this.id = id;
         this.name = name;
         this.credentials = credentials;
@@ -25,7 +25,7 @@ public abstract class User {
         this.wallet = new Wallet(new BigDecimal("0.00"));
     }
 
-    public abstract String getDocumentType();
+    public abstract String getType();
 
     public abstract void credit(BigDecimal aValue);
 
@@ -39,7 +39,7 @@ public abstract class User {
         return name;
     }
 
-    public String getDocument() {
+    public UserDocument getDocument() {
         return document;
     }
 

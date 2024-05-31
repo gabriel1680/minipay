@@ -1,5 +1,7 @@
 server:
   port: ${webserver.port}
+  servlet:
+    context-path: /api
   compression:
     enabled: true
     mime-types: text/html,text/xml,text/javascript,application/javascript,application/json

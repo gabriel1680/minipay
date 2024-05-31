@@ -3,17 +3,17 @@ package com.minipay.domain;
 import java.math.BigDecimal;
 
 public class CommonUser extends User {
-    public CommonUser(Integer id, String name, UserCredentials credentials, String document, Wallet wallet) {
+    public CommonUser(Integer id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
         super(id, name, credentials, document, wallet);
     }
 
-    public CommonUser(Integer id, String name, UserCredentials credentials, String document) {
+    public CommonUser(Integer id, String name, UserCredentials credentials, UserDocument document) {
         super(id, name, credentials, document);
     }
 
     @Override
-    public String getDocumentType() {
-        return "cpf";
+    public String getType() {
+        return "usuário";
     }
 
     @Override

@@ -27,6 +27,7 @@ tasks.named("bootJar") {
 
 ext {
     cache2k = "2.6.1.Final"
+    swagger = "1.6.8"
 }
 
 dependencies {
@@ -50,8 +51,8 @@ dependencies {
     runtimeOnly("org.cache2k:cache2k-core:$cache2k")
 
     // docs
-    implementation("org.springdoc:springdoc-openapi-webmvc-core:1.7.0")
-    implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
+    implementation("org.springdoc:springdoc-openapi-webmvc-core:$swagger")
+    implementation("org.springdoc:springdoc-openapi-ui:$swagger")
 
     // webserver - sub tomcat for undertow
     implementation("org.springframework.boot:spring-boot-starter-web") {
@@ -61,13 +62,7 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-aop")
     implementation("org.springframework.boot:spring-boot-starter-cache")
-    implementation("org.springframework.boot:spring-boot-starter-graphql")
-    implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
-    implementation("org.springframework.boot:spring-boot-starter-data-elasticsearch")
-    implementation("org.springframework.cloud:spring-cloud-contract-wiremock")
-    implementation("org.springframework.kafka:spring-kafka")
 
     // == tests ==
     // local
@@ -76,17 +71,12 @@ dependencies {
     // spring
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.boot:spring-boot-testcontainers")
-    testImplementation("org.springframework.graphql:spring-graphql-test")
-    testImplementation("org.springframework.kafka:spring-kafka-test")
-    testImplementation("org.springframework.security:spring-security-test")
 
     // flyway
     testImplementation('org.flywaydb:flyway-core')
 
     // test container
     testImplementation("org.testcontainers:testcontainers:1.18.3")
-    testImplementation("org.testcontainers:elasticsearch:1.18.3")
-    testImplementation("org.testcontainers:kafka:1.18.3")
     testImplementation("org.testcontainers:junit-jupiter:1.18.3")
 
     testRuntimeOnly('com.h2database:h2')

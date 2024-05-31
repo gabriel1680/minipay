@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61c0576-c7f7-4e20-8276-e6a62400fa14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/TransferEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateTransferRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateUserRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/CommonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/CommonUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/ShopKeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/ShopKeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/fixture/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/fixture/UserBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration/U1__create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration/U1__create_tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration/V1__create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration/V1__create_tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +60,13 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MiniPay" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="flyway" type="c8890929:TasksNode$1" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MiniPay" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -58,8 +78,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -87,6 +108,8 @@
     &quot;Gradle.CreateUserUseCaseTest.executeWhenEmailExists.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.CreateUserUseCaseTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MiniPay [bootJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [clean].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MiniPay [flywayClean].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MiniPay [flywayInfo].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MiniPay [flywayMigrate].executor&quot;: &quot;Run&quot;,
@@ -131,7 +154,7 @@
       <recent name="com.minipay.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.MiniPay [bootRun]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.minipay.infrastructure.Main" />
       <module name="MiniPay.infrastructure.main" />
@@ -144,6 +167,50 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="MiniPay [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MiniPay [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="MiniPay [flywayClean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -189,57 +256,13 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MiniPay [flywayMigrate]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="flywayMigrate" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MiniPay [flywayUndo]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="flywayUndo" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MiniPay [bootRun]" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.MiniPay [clean]" />
         <item itemvalue="Gradle.MiniPay [flywayClean]" />
         <item itemvalue="Gradle.MiniPay [flywayInfo]" />
-        <item itemvalue="Gradle.MiniPay [flywayUndo]" />
-        <item itemvalue="Gradle.MiniPay [flywayMigrate]" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

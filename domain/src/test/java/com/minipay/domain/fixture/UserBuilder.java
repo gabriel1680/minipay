@@ -1,26 +1,25 @@
 package com.minipay.domain.fixture;
 
 import com.minipay.domain.*;
+import lombok.Builder;
+import lombok.experimental.Accessors;
 
 import java.math.BigDecimal;
 
+@Builder
+@Accessors(fluent = true)
 public class UserBuilder {
     private Integer id = 1;
     private String name = "seu antonio";
-    private UserType type = UserType.SHOPKEEPER;
+    private String type = "lojista";
     private UserCredentials credentials = new UserCredentials("antonio@fagundes.com", "123");
-    private String document = "71755076000175";
+    private UserDocument document = new UserDocument("cnpj", "71755076000175");
     private BigDecimal balance = BigDecimal.ZERO;
 
     private UserBuilder() {}
 
     public UserBuilder withId(final Integer anId) {
         id = anId;
-        return this;
-    }
-
-    public UserBuilder ofType(final UserType aType) {
-        type = aType;
         return this;
     }
 
@@ -34,8 +33,8 @@ public class UserBuilder {
         return this;
     }
 
-    public UserBuilder withDocument(final String aDocument) {
-        document = aDocument;
+    public UserBuilder withDocument(final String documentType, final String aDocument) {
+        document = new UserDocument(documentType, aDocument);
         return this;
     }
 
@@ -46,7 +45,7 @@ public class UserBuilder {
 
     public User build() {
         var wallet = new Wallet(balance);
-        return type.equals(UserType.SHOPKEEPER) ?
+        return type.equals("lojista") ?
                 new ShopKeeper(id, name, credentials, document, wallet) :
                 new CommonUser(id, name, credentials, document, wallet);
     }
