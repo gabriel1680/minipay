@@ -6,7 +6,7 @@ public record CreateUserRequest(
         @JsonProperty("name") String name,
         @JsonProperty("email") String email,
         @JsonProperty("password") String password,
-        @JsonProperty("document") String document,
+        @JsonProperty("documentValue") String documentValue,
         @JsonProperty("documentType") String documentType
 ) {
 }

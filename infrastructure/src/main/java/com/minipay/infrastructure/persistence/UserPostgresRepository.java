@@ -2,15 +2,17 @@ package com.minipay.infrastructure.persistence;
 
 import com.minipay.domain.User;
 import com.minipay.domain.UserRepository;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public class UserPostgresGateway implements UserRepository  {
+@Component
+public class UserPostgresRepository implements UserRepository  {
 
     private final UserJpaRepository jpaRepository;
 
-    public UserPostgresGateway(UserJpaRepository jpaRepository) {
+    public UserPostgresRepository(UserJpaRepository jpaRepository) {
         this.jpaRepository = jpaRepository;
     }
 

@@ -15,7 +15,8 @@ public class CreateUserUseCase {
     }
 
     public void execute(Input input) {
-        if (userRepository.exists(input.email)) throw new RuntimeException();
+        if (userRepository.exists(input.email))
+            throw new RuntimeException("Email already taken");
         final var user = createUserFrom(input);
         userRepository.save(user);
     }

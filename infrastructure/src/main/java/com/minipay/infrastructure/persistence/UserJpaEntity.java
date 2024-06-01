@@ -38,6 +38,8 @@ public class UserJpaEntity {
         this.documentValue = documentValue;
     }
 
+    public UserJpaEntity() {}
+
     public UUID getId() {
         return id;
     }

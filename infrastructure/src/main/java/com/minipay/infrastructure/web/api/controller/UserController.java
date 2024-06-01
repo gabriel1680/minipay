@@ -22,7 +22,7 @@ public class UserController implements UserAPI {
                 body.email(),
                 body.password(),
                 body.documentType(),
-                body.document()
+                body.documentValue()
         );
         try {
             this.createUserUseCase.execute(input);
