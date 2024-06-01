@@ -1,6 +1,9 @@
 package com.minipay.domain.fixture;
 
 import com.minipay.domain.*;
+import com.minipay.domain.valueobject.UserCredentials;
+import com.minipay.domain.valueobject.UserDocument;
+import com.minipay.domain.valueobject.Wallet;
 import lombok.Builder;
 import lombok.experimental.Accessors;
 

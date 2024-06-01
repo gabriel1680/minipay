@@ -1,5 +1,9 @@
 package com.minipay.domain;
 
+import com.minipay.domain.valueobject.UserCredentials;
+import com.minipay.domain.valueobject.UserDocument;
+import com.minipay.domain.valueobject.Wallet;
+
 import java.math.BigDecimal;
 import java.util.UUID;
 

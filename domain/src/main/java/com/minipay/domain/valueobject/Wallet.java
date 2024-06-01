@@ -1,4 +1,4 @@
-package com.minipay.domain;
+package com.minipay.domain.valueobject;
 
 import java.math.BigDecimal;
 

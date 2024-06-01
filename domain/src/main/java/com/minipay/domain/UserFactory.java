@@ -1,5 +1,8 @@
 package com.minipay.domain;
 
+import com.minipay.domain.valueobject.UserCredentials;
+import com.minipay.domain.valueobject.UserDocument;
+
 import java.util.UUID;
 
 public class UserFactory {

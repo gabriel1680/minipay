@@ -1,5 +1,7 @@
 package com.minipay.domain;
 
+import com.minipay.domain.valueobject.UserCredentials;
+import com.minipay.domain.valueobject.Wallet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
