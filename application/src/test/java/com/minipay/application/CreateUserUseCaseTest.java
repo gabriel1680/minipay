@@ -2,6 +2,7 @@ package com.minipay.application;
 
 import com.minipay.application.fixture.CreateUserInputBuilder;
 import com.minipay.application.fixture.MemoryUserRepository;
+import com.minipay.application.usecase.CreateUserUseCase;
 import com.minipay.domain.fixture.UserBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

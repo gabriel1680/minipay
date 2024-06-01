@@ -1,7 +1,7 @@
 package com.minipay.application.fixture;
 
-import com.minipay.domain.Transfer;
-import com.minipay.domain.TransferRepository;
+import com.minipay.domain.transfer.Transfer;
+import com.minipay.domain.transfer.TransferRepository;
 
 import java.util.ArrayList;
 import java.util.List;

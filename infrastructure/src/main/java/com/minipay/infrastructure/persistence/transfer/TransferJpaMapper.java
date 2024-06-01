@@ -1,6 +1,6 @@
 package com.minipay.infrastructure.persistence.transfer;
 
-import com.minipay.domain.Transfer;
+import com.minipay.domain.transfer.Transfer;
 
 public class TransferJpaMapper {
     public static Transfer toDomain(TransferJpaEntity entity) {

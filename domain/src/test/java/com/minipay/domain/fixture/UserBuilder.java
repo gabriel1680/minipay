@@ -1,8 +1,9 @@
 package com.minipay.domain.fixture;
 
-import com.minipay.domain.*;
-import com.minipay.domain.valueobject.UserCredentials;
-import com.minipay.domain.valueobject.UserDocument;
+import com.minipay.domain.user.User;
+import com.minipay.domain.user.UserType;
+import com.minipay.domain.user.UserCredentials;
+import com.minipay.domain.user.UserDocument;
 
 import java.math.BigDecimal;
 import java.util.UUID;

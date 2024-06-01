@@ -1,5 +1,8 @@
 package com.minipay.domain;
 
+import com.minipay.domain.transfer.Transfer;
+import com.minipay.domain.user.User;
+
 import java.math.BigDecimal;
 
 public class TransferService {

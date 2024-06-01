@@ -1,6 +1,9 @@
-package com.minipay.application;
+package com.minipay.application.usecase;
 
-import com.minipay.domain.*;
+import com.minipay.domain.event.DomainEventDispatcher;
+import com.minipay.domain.transfer.TransferRepository;
+import com.minipay.domain.TransferService;
+import com.minipay.domain.user.UserRepository;
 import jakarta.transaction.Transactional;
 
 import java.math.BigDecimal;
@@ -10,9 +13,9 @@ import java.util.UUID;
 public class TransferUseCase {
     private final UserRepository userRepository;
     private final TransferRepository transferRepository;
-    private final EventDispatcher dispatcher;
+    private final DomainEventDispatcher dispatcher;
 
-    public TransferUseCase(UserRepository userRepository, TransferRepository transferRepository, EventDispatcher dispatcher) {
+    public TransferUseCase(UserRepository userRepository, TransferRepository transferRepository, DomainEventDispatcher dispatcher) {
         this.userRepository = Objects.requireNonNull(userRepository);
         this.transferRepository = Objects.requireNonNull(transferRepository);
         this.dispatcher = Objects.requireNonNull(dispatcher);
@@ -26,7 +29,7 @@ public class TransferUseCase {
         userRepository.save(payee);
         userRepository.save(payer);
         transferRepository.save(transfer);
-        transfer.getEvents().forEach(dispatcher::publish);
+        transfer.publishEvents(dispatcher);
     }
 
     public record Input(String payerId, String payeeId, double amount) {}

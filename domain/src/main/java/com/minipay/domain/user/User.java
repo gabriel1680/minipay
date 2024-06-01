@@ -1,13 +1,11 @@
-package com.minipay.domain;
+package com.minipay.domain.user;
 
-import com.minipay.domain.valueobject.UserCredentials;
-import com.minipay.domain.valueobject.UserDocument;
+import com.minipay.domain.Entity;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public class User {
-    private UUID id;
+public class User extends Entity {
     private String name;
     private UserType type;
     private UserCredentials credentials;
@@ -15,7 +13,7 @@ public class User {
     private BigDecimal balance;
 
     public User(UUID id, String name, UserType type, UserCredentials credentials, UserDocument document, BigDecimal balance) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.type = type;
         this.credentials = credentials;

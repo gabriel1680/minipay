@@ -1,7 +1,7 @@
 package com.minipay.application.fixture;
 
-import com.minipay.domain.User;
-import com.minipay.domain.UserRepository;
+import com.minipay.domain.user.User;
+import com.minipay.domain.user.UserRepository;
 
 import java.util.ArrayList;
 import java.util.List;

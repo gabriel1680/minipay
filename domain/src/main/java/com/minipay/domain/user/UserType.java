@@ -1,4 +1,4 @@
-package com.minipay.domain;
+package com.minipay.domain.user;
 
 import java.util.Arrays;
 

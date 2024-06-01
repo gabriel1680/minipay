@@ -1,7 +1,7 @@
 package com.minipay.infrastructure.configuration;
 
-import com.minipay.application.AuthorizationService;
-import com.minipay.application.MailService;
+import com.minipay.application.service.AuthorizationService;
+import com.minipay.application.service.MailService;
 import com.minipay.infrastructure.service.AuthorizationMemoryService;
 import com.minipay.infrastructure.service.MailMemoryService;
 import org.springframework.context.annotation.Bean;

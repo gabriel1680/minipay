@@ -1,7 +1,7 @@
 package com.minipay.infrastructure.persistence.user;
 
-import com.minipay.domain.User;
-import com.minipay.domain.UserRepository;
+import com.minipay.domain.user.User;
+import com.minipay.domain.user.UserRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.minipay.application;
+package com.minipay.application.service;
 
 import io.vavr.control.Either;
 

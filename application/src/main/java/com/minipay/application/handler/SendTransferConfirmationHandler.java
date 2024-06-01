@@ -1,9 +1,10 @@
-package com.minipay.application;
+package com.minipay.application.handler;
 
-import com.minipay.domain.EventHandler;
-import com.minipay.domain.TransferCreated;
-import com.minipay.domain.User;
-import com.minipay.domain.UserRepository;
+import com.minipay.application.service.MailService;
+import com.minipay.domain.event.EventHandler;
+import com.minipay.domain.transfer.TransferCreated;
+import com.minipay.domain.user.User;
+import com.minipay.domain.user.UserRepository;
 
 import java.util.Objects;
 

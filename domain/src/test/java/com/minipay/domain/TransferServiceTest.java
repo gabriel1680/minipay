@@ -1,6 +1,7 @@
 package com.minipay.domain;
 
 import com.minipay.domain.fixture.UserBuilder;
+import com.minipay.domain.user.UserType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

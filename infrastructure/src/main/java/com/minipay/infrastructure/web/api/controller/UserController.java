@@ -1,6 +1,6 @@
 package com.minipay.infrastructure.web.api.controller;
 
-import com.minipay.application.CreateUserUseCase;
+import com.minipay.application.usecase.CreateUserUseCase;
 import com.minipay.infrastructure.web.api.dto.CreateUserRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

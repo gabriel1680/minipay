@@ -1,6 +1,6 @@
 package com.minipay.infrastructure.persistence.user;
 
-import com.minipay.domain.UserType;
+import com.minipay.domain.user.UserType;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 

@@ -1,6 +1,6 @@
 package com.minipay.infrastructure.web.api.controller;
 
-import com.minipay.application.TransferUseCase;
+import com.minipay.application.usecase.TransferUseCase;
 import com.minipay.infrastructure.web.api.dto.CreateTransferRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

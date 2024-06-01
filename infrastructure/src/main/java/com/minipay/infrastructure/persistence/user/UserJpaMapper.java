@@ -1,8 +1,8 @@
 package com.minipay.infrastructure.persistence.user;
 
-import com.minipay.domain.User;
-import com.minipay.domain.valueobject.UserCredentials;
-import com.minipay.domain.valueobject.UserDocument;
+import com.minipay.domain.user.User;
+import com.minipay.domain.user.UserCredentials;
+import com.minipay.domain.user.UserDocument;
 
 public class UserJpaMapper {
     public static User toDomain(UserJpaEntity entity) {

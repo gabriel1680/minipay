@@ -1,7 +1,7 @@
 package com.minipay.infrastructure.persistence.transfer;
 
-import com.minipay.domain.Transfer;
-import com.minipay.domain.TransferRepository;
+import com.minipay.domain.transfer.Transfer;
+import com.minipay.domain.transfer.TransferRepository;
 import org.springframework.stereotype.Component;
 
 @Component

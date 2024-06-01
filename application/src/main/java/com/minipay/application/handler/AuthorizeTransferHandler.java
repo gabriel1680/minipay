@@ -1,7 +1,8 @@
-package com.minipay.application;
+package com.minipay.application.handler;
 
-import com.minipay.domain.EventHandler;
-import com.minipay.domain.TransferCreated;
+import com.minipay.application.service.AuthorizationService;
+import com.minipay.domain.event.EventHandler;
+import com.minipay.domain.transfer.TransferCreated;
 
 public class AuthorizeTransferHandler implements EventHandler<TransferCreated> {
     private final AuthorizationService authorizationService;

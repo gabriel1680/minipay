@@ -1,4 +1,4 @@
-package com.minipay.domain.valueobject;
+package com.minipay.domain.user;
 
 public record UserDocument(String type, String value) {
 }

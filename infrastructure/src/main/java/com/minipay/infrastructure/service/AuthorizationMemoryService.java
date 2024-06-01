@@ -1,6 +1,6 @@
 package com.minipay.infrastructure.service;
 
-import com.minipay.application.AuthorizationService;
+import com.minipay.application.service.AuthorizationService;
 
 import java.math.BigDecimal;
 

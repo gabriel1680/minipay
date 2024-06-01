@@ -1,6 +1,6 @@
 package com.minipay.infrastructure.service;
 
-import com.minipay.application.MailService;
+import com.minipay.application.service.MailService;
 import io.vavr.control.Either;
 
 public class MailMemoryService implements MailService {

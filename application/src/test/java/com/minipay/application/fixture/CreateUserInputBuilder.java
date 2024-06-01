@@ -1,7 +1,7 @@
 package com.minipay.application.fixture;
 
-import com.minipay.application.CreateUserUseCase;
-import com.minipay.domain.UserType;
+import com.minipay.application.usecase.CreateUserUseCase;
+import com.minipay.domain.user.UserType;
 
 public class CreateUserInputBuilder {
 

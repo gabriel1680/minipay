@@ -1,4 +1,4 @@
-package com.minipay.domain;
+package com.minipay.domain.event;
 
 public interface EventHandler<T extends DomainEvent> {
     boolean canHandle(Class<?> event);
