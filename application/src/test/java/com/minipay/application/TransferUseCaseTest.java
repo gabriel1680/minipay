@@ -2,6 +2,7 @@ package com.minipay.application;
 
 import com.minipay.application.fixture.MemoryTransferRepository;
 import com.minipay.application.fixture.MemoryUserRepository;
+import com.minipay.domain.EventDispatcher;
 import com.minipay.domain.fixture.UserBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,15 +12,17 @@ import java.util.UUID;
 
 class TransferUseCaseTest {
 
+    EventDispatcher dispatcher;
     MemoryUserRepository userRepository;
     MemoryTransferRepository transferRepository;
     TransferUseCase sut;
 
     @BeforeEach
     void setup() {
+        dispatcher = EventDispatcher.fresh();
         userRepository = new MemoryUserRepository();
         transferRepository = new MemoryTransferRepository();
-        sut = new TransferUseCase(userRepository, transferRepository);
+        sut = new TransferUseCase(userRepository, transferRepository, dispatcher);
     }
 
     @Test
