@@ -5,53 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61c0576-c7f7-4e20-8276-e6a62400fa14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/Identity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/ValueObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/DomainEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/DomainEventDispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/MemoryEventDispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/transfer/TransferCreated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/DomainEventRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/AuthorizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/service/AuthorizationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/AuthorizeTransferHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/handler/AuthorizeTransferHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/CreateUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/CreateUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/service/MailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/SendTransferConfirmationHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/handler/SendTransferConfirmationHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/TransferUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/TransferUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/CreateUserUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/CreateUserUseCaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/TransferUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/TransferUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/CreateUserInputBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/CreateUserInputBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/MemoryTransferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/MemoryTransferRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/MemoryUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/MemoryUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/DomainEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/EventDispatcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/transfer/Transfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/TransferCreated.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/TransferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/transfer/TransferRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/TransferService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/UserType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/valueobject/UserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/UserCredentials.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/valueobject/UserDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/UserDocument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/TransferServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/TransferServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/fixture/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/fixture/UserBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/UseCaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/UseCaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/transfer/TransferJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/transfer/TransferJpaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/transfer/TransferPostgresRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/transfer/TransferPostgresRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserJpaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserJpaEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserJpaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserPostgresRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserPostgresRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserTypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/user/UserTypeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/service/AuthorizationMemoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/service/AuthorizationMemoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/service/MailMemoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/service/MailMemoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/MemoryEventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/MemoryEventDispatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +71,8 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Record" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -143,7 +100,7 @@
     "Gradle.CreateUserUseCaseTest.executeWhenEmailExists.executor": "Run",
     "Gradle.CreateUserUseCaseTest.executor": "Run",
     "Gradle.MiniPay [bootJar].executor": "Run",
-    "Gradle.MiniPay [bootRun].executor": "Debug",
+    "Gradle.MiniPay [bootRun].executor": "Run",
     "Gradle.MiniPay [clean].executor": "Run",
     "Gradle.MiniPay [flywayBaseline].executor": "Run",
     "Gradle.MiniPay [flywayClean].executor": "Run",
@@ -194,7 +151,7 @@
       <recent name="com.minipay.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MiniPay [bootRun]">
+  <component name="RunManager" selected="Gradle.TransferUseCaseTest">
     <configuration name="MiniPay [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -311,8 +268,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MiniPay [bootRun]" />
         <item itemvalue="Gradle.TransferUseCaseTest" />
+        <item itemvalue="Gradle.MiniPay [bootRun]" />
         <item itemvalue="Gradle.MiniPay [flywayMigrate]" />
         <item itemvalue="Gradle.MiniPay [bootJar]" />
         <item itemvalue="Gradle.TransferUseCaseTest.execute" />

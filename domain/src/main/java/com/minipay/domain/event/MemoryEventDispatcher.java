@@ -2,7 +2,7 @@ package com.minipay.domain.event;
 
 import java.util.*;
 
-public class MemoryEventDispatcher implements DomainEventDispatcher {
+public class MemoryEventDispatcher implements DomainEventDispatcher, DomainEventRegister {
     private static MemoryEventDispatcher instance;
 
     private final List<EventHandler> handlers;
