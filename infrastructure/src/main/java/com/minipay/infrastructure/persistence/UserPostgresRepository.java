@@ -29,13 +29,13 @@ public class UserPostgresRepository implements UserRepository  {
     @Override
     public Optional<User> get(UUID userId) {
         return jpaRepository
-                .findById(userId.toString())
+                .findById(userId)
                 .map(UserJpaMapper::toDomain);
     }
 
     @Override
     public boolean exists(UUID id) {
-        return jpaRepository.existsById(id.toString());
+        return jpaRepository.existsById(id);
     }
 
     @Override

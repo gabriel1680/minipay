@@ -1,7 +1,9 @@
 package com.minipay.infrastructure.persistence;
 
+import com.minipay.domain.UserType;
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -14,7 +16,7 @@ public class UserJpaEntity {
     private String name;
 
     @Column(name = "type")
-    private String type;
+    private UserType type;
 
     @Column(name = "email", unique = true)
     private String email;
@@ -28,7 +30,10 @@ public class UserJpaEntity {
     @Column(name = "document_value")
     private String documentValue;
 
-    public UserJpaEntity(UUID id, String name, String type, String email, String password, String documentType, String documentValue) {
+    @Column(name = "balance")
+    private BigDecimal balance;
+
+    public UserJpaEntity(UUID id, String name, UserType type, String email, String password, String documentType, String documentValue, BigDecimal balance) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -36,6 +41,7 @@ public class UserJpaEntity {
         this.password = password;
         this.documentType = documentType;
         this.documentValue = documentValue;
+        this.balance = balance;
     }
 
     public UserJpaEntity() {}
@@ -44,11 +50,19 @@ public class UserJpaEntity {
         return id;
     }
 
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
+    }
+
     public String getName() {
         return name;
     }
 
-    public String getType() {
+    public UserType getType() {
         return type;
     }
 
@@ -76,7 +90,7 @@ public class UserJpaEntity {
         this.name = name;
     }
 
-    public void setType(String type) {
+    public void setType(UserType type) {
         this.type = type;
     }
 

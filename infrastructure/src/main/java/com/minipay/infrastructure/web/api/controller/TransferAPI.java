@@ -5,14 +5,19 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@RequestMapping(name = "transfers")
+@RequestMapping(value = "transfers")
 public interface TransferAPI {
-    @PostMapping
+    @PostMapping(
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(description = "Creates a new transfer between two users")
     @ApiResponses(value = {
@@ -21,5 +26,5 @@ public interface TransferAPI {
             @ApiResponse(responseCode = "400", description = "Invalid Payload"),
             @ApiResponse(responseCode = "500", description = "Internal Server Error"),
     })
-    ResponseEntity<?> performTransfer(CreateTransferRequest aRequest);
+    ResponseEntity<?> performTransfer(@RequestBody CreateTransferRequest aRequest);
 }

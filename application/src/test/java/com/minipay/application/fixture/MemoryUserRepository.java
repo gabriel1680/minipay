@@ -6,14 +6,10 @@ import com.minipay.domain.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public class MemoryUserRepository implements UserRepository {
     public List<User> users = new ArrayList<>();
-
-    @Override
-    public Integer getNextId() {
-        return 0;
-    }
 
     @Override
     public void save(User user) {
@@ -26,12 +22,12 @@ public class MemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public Optional<User> get(Integer userId) {
+    public Optional<User> get(UUID userId) {
         return users.stream().filter((final User aUser) -> aUser.getId().equals(userId)).findFirst();
     }
 
     @Override
-    public boolean exists(Integer id) {
+    public boolean exists(UUID id) {
         return users
                 .stream()
                 .anyMatch((User aUser) -> aUser.getId().equals(id));

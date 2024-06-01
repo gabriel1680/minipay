@@ -1,17 +1,19 @@
 package com.minipay.infrastructure.persistence;
 
 import com.minipay.domain.User;
-import com.minipay.domain.UserFactory;
+import com.minipay.domain.UserType;
+import com.minipay.domain.valueobject.UserCredentials;
+import com.minipay.domain.valueobject.UserDocument;
 
 public class UserJpaMapper {
     public static User toDomain(UserJpaEntity entity) {
-        return UserFactory.create(
+        return new User(
                 entity.getId(),
                 entity.getName(),
-                entity.getEmail(),
-                entity.getPassword(),
-                entity.getDocumentType(),
-                entity.getDocumentValue()
+                entity.getType(),
+                new UserCredentials(entity.getEmail(), entity.getPassword()),
+                new UserDocument(entity.getDocumentType(), entity.getDocumentValue()),
+                entity.getBalance()
         );
     }
 
@@ -25,7 +27,8 @@ public class UserJpaMapper {
                 credentials.email(),
                 credentials.password(),
                 document.type(),
-                document.value()
+                document.value(),
+                model.getBalance()
         );
     }
 }

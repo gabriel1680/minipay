@@ -5,14 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61c0576-c7f7-4e20-8276-e6a62400fa14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/UseCaseConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/MemoryTransferRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/Transfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/TransferRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/TransferJpaMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/TransferJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/TransferPostgresRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserTypeConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/application/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/CreateUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/CreateUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/TransferUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/TransferUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/TransferUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/TransferUseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/CreateUserInputBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/CreateUserInputBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/MemoryUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/fixture/MemoryUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/CommonUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/ShopKeeper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/TransferService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/TransferService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/valueobject/Wallet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/CommonUserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/ShopKeeperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/TransferServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/TransferServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/WalletTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/fixture/UserBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/fixture/UserBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/UseCaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/UseCaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/TransferJpaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/TransferJpaEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserJpaEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserJpaEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserPostgresGateway.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserPostgresRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserJpaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserJpaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserJpaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserPostgresRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/persistence/UserPostgresRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateTransferRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateTransferRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateUserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration/V1__create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration/V1__create_tables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,8 +107,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -97,6 +129,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build MiniPay.executor": "Run",
     "Gradle.CommonUserTest.credit.executor": "Run",
     "Gradle.CommonUserTest.debit.executor": "Run",
     "Gradle.CommonUserTest.executor": "Run",
@@ -104,19 +137,22 @@
     "Gradle.CreateUserUseCaseTest.executeWhenEmailExists.executor": "Run",
     "Gradle.CreateUserUseCaseTest.executor": "Run",
     "Gradle.MiniPay [bootJar].executor": "Run",
-    "Gradle.MiniPay [bootRun].executor": "Debug",
+    "Gradle.MiniPay [bootRun].executor": "Run",
     "Gradle.MiniPay [clean].executor": "Run",
     "Gradle.MiniPay [flywayBaseline].executor": "Run",
     "Gradle.MiniPay [flywayClean].executor": "Run",
     "Gradle.MiniPay [flywayInfo].executor": "Run",
-    "Gradle.MiniPay [flywayMigrate].executor": "Run",
+    "Gradle.MiniPay [flywayMigrate].executor": "Debug",
     "Gradle.MiniPay [flywayRepair].executor": "Run",
     "Gradle.MiniPay [flywayUndo].executor": "Run",
     "Gradle.MiniPay:infrastructure [:infrastructure:Main.main()].executor": "Run",
     "Gradle.ShopKeeperTest.executor": "Run",
     "Gradle.TransactionServiceTest.executor": "Run",
+    "Gradle.TransferServiceTest.executor": "Run",
     "Gradle.TransferUseCaseTest.execute.executor": "Run",
+    "Gradle.TransferUseCaseTest.executor": "Run",
     "Gradle.UserTest.executor": "Run",
+    "Gradle.UserTest.factory.executor": "Run",
     "Gradle.UserTest.getId.executor": "Run",
     "Gradle.UserTest.newUser.executor": "Run",
     "Gradle.WalletTest.credit.executor": "Run",
@@ -135,8 +171,8 @@
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/gabriellopes/Code/JavaProjects/MiniPay/infrastructure/src/main/resources/db/migration",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -153,6 +189,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.MiniPay [bootRun]">
+    <configuration name="MiniPay [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="MiniPay [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -165,50 +223,6 @@
         <option name="taskNames">
           <list>
             <option value="bootRun" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MiniPay [flywayBaseline]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="flywayBaseline" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MiniPay [flywayInfo]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="flywayInfo" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -241,35 +255,61 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MiniPay [flywayRepair]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TransferUseCaseTest.execute" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="flywayRepair" />
+            <option value=":application:test" />
+            <option value="--tests" />
+            <option value="&quot;com.minipay.application.TransferUseCaseTest.execute&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.factory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":domain:test" />
+            <option value="--tests" />
+            <option value="&quot;com.minipay.domain.UserTest.factory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.MiniPay [bootRun]" />
         <item itemvalue="Gradle.MiniPay [flywayMigrate]" />
-        <item itemvalue="Gradle.MiniPay [flywayBaseline]" />
-        <item itemvalue="Gradle.MiniPay [flywayInfo]" />
-        <item itemvalue="Gradle.MiniPay [flywayRepair]" />
+        <item itemvalue="Gradle.MiniPay [bootJar]" />
+        <item itemvalue="Gradle.TransferUseCaseTest.execute" />
+        <item itemvalue="Gradle.UserTest.factory" />
       </list>
     </recent_temporary>
   </component>
@@ -283,5 +323,21 @@
       <updated>1716678653434</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

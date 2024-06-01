@@ -2,39 +2,49 @@ package com.minipay.domain;
 
 import com.minipay.domain.valueobject.UserCredentials;
 import com.minipay.domain.valueobject.UserDocument;
-import com.minipay.domain.valueobject.Wallet;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public abstract class User {
+public class User {
     private UUID id;
     private String name;
+    private UserType type;
     private UserCredentials credentials;
     private UserDocument document;
-    protected Wallet wallet;
+    private BigDecimal balance;
 
-    public User(UUID id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
+    public User(UUID id, String name, UserType type, UserCredentials credentials, UserDocument document, BigDecimal balance) {
         this.id = id;
         this.name = name;
+        this.type = type;
         this.credentials = credentials;
         this.document = document;
-        this.wallet = wallet;
+        this.balance = balance;
     }
 
-    public User(UUID id, String name, UserCredentials credentials, UserDocument document) {
-        this.id = id;
-        this.name = name;
-        this.credentials = credentials;
-        this.document = document;
-        this.wallet = new Wallet(new BigDecimal("0.00"));
+    public static User create(String name, String type, String email, String password, String documentType, String documentValue) {
+        return new User(
+                UUID.randomUUID(),
+                name,
+                UserType.of(type).orElseThrow(() -> new RuntimeException("Invalid user type")),
+                new UserCredentials(email, password),
+                new UserDocument(documentType, documentValue),
+                new BigDecimal("0.00")
+        );
     }
 
-    public abstract String getType();
+    public void credit(BigDecimal aValue) {
+        if (balance.compareTo(aValue) < 0)
+            throw new RuntimeException("Invalid amount");
+        if (type.equals(UserType.SHOPKEEPER))
+            throw new RuntimeException("A Shopkeeper is not allowed to perform a credit operation");
+        balance = balance.subtract(aValue);
+    }
 
-    public abstract void credit(BigDecimal aValue);
-
-    public abstract void debit(BigDecimal aValue);
+    public void debit(BigDecimal aValue) {
+        balance = balance.add(aValue);
+    }
 
     public UUID getId() {
         return id;
@@ -44,12 +54,16 @@ public abstract class User {
         return name;
     }
 
+    public UserType getType() {
+        return type;
+    }
+
     public UserDocument getDocument() {
         return document;
     }
 
-    public Wallet getWallet() {
-        return wallet;
+    public BigDecimal getBalance() {
+        return balance;
     }
 
     public UserCredentials getCredentials() {

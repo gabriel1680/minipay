@@ -10,7 +10,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE transfers (
-    id SERIAL PRIMARY KEY,
+    id UUID PRIMARY KEY,
     payer_id UUID NOT NULL,
     payee_id UUID NOT NULL,
     amount DECIMAL(10, 2) NOT NULL,

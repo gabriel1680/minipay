@@ -12,6 +12,6 @@ repositories {
 
 dependencies {
     implementation(project(':domain'))
-
+    implementation 'jakarta.transaction:jakarta.transaction-api:2.0.1'
     testImplementation(project(path: ':domain', configuration: 'testClasses'))
 }

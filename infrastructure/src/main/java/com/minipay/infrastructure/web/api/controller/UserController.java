@@ -16,9 +16,10 @@ public class UserController implements UserAPI {
     }
 
     @Override
-    public ResponseEntity<Void> createUser(final CreateUserRequest body) {
+    public ResponseEntity<?> createUser(final CreateUserRequest body) {
         final var input = new CreateUserUseCase.Input(
                 body.name(),
+                body.type(),
                 body.email(),
                 body.password(),
                 body.documentType(),
