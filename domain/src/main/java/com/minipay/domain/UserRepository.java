@@ -1,12 +1,12 @@
 package com.minipay.domain;
 
 import java.util.Optional;
+import java.util.UUID;
 
 public interface UserRepository {
-    Integer getNextId();
     void save(User user);
     void remove(User user);
-    Optional<User> get(Integer userId);
-    boolean exists(Integer id);
+    Optional<User> get(UUID userId);
+    boolean exists(UUID id);
     boolean exists(String email);
 }

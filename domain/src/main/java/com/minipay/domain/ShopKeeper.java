@@ -1,13 +1,14 @@
 package com.minipay.domain;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public class ShopKeeper extends User {
-    public ShopKeeper(Integer id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
+    public ShopKeeper(UUID id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
         super(id, name, credentials, document, wallet);
     }
 
-    public ShopKeeper(Integer id, String name, UserCredentials credentials, UserDocument document) {
+    public ShopKeeper(UUID id, String name, UserCredentials credentials, UserDocument document) {
         super(id, name, credentials, document);
     }
 

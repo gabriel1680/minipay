@@ -5,6 +5,7 @@ import com.minipay.domain.UserRepository;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+import java.util.UUID;
 
 public class TransferUseCase {
     private final UserRepository userRepository;
@@ -21,5 +22,5 @@ public class TransferUseCase {
         userRepository.save(payer);
     }
 
-    public record Input(double amount, Integer payeeId, Integer payerId) {}
+    public record Input(double amount, UUID payeeId, UUID payerId) {}
 }

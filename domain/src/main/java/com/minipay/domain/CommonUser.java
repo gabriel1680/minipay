@@ -1,13 +1,14 @@
 package com.minipay.domain;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public class CommonUser extends User {
-    public CommonUser(Integer id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
+    public CommonUser(UUID id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
         super(id, name, credentials, document, wallet);
     }
 
-    public CommonUser(Integer id, String name, UserCredentials credentials, UserDocument document) {
+    public CommonUser(UUID id, String name, UserCredentials credentials, UserDocument document) {
         super(id, name, credentials, document);
     }
 

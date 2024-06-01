@@ -1,15 +1,16 @@
 package com.minipay.domain;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 public abstract class User {
-    private Integer id;
+    private UUID id;
     private String name;
     private UserCredentials credentials;
     private UserDocument document;
     protected Wallet wallet;
 
-    public User(Integer id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
+    public User(UUID id, String name, UserCredentials credentials, UserDocument document, Wallet wallet) {
         this.id = id;
         this.name = name;
         this.credentials = credentials;
@@ -17,7 +18,7 @@ public abstract class User {
         this.wallet = wallet;
     }
 
-    public User(Integer id, String name, UserCredentials credentials, UserDocument document) {
+    public User(UUID id, String name, UserCredentials credentials, UserDocument document) {
         this.id = id;
         this.name = name;
         this.credentials = credentials;
@@ -31,7 +32,7 @@ public abstract class User {
 
     public abstract void debit(BigDecimal aValue);
 
-    public Integer getId() {
+    public UUID getId() {
         return id;
     }
 

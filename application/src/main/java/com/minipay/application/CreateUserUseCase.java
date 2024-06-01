@@ -5,6 +5,7 @@ import com.minipay.domain.UserFactory;
 import com.minipay.domain.UserRepository;
 
 import java.util.Objects;
+import java.util.UUID;
 
 public class CreateUserUseCase {
     final private UserRepository userRepository;
@@ -21,12 +22,12 @@ public class CreateUserUseCase {
 
     private User createUserFrom(Input anInput) {
         return UserFactory.create(
-            userRepository.getNextId(),
-            anInput.name(),
-            anInput.email(),
-            anInput.password(),
-            anInput.documentType(),
-            anInput.documentValue()
+                UUID.randomUUID(),
+                anInput.name(),
+                anInput.email(),
+                anInput.password(),
+                anInput.documentType(),
+                anInput.documentValue()
         );
     }
 

@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "transfers")
-public class TransferEntity {
+public class TransferJpaEntity {
     @Id
     public UUID id;
 
