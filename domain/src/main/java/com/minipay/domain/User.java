@@ -27,7 +27,7 @@ public class User {
         return new User(
                 UUID.randomUUID(),
                 name,
-                UserType.of(type).orElseThrow(() -> new RuntimeException("Invalid user type")),
+                UserType.of(type),
                 new UserCredentials(email, password),
                 new UserDocument(documentType, documentValue),
                 new BigDecimal("0.00")

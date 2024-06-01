@@ -1,4 +1,4 @@
-package com.minipay.infrastructure.persistence;
+package com.minipay.infrastructure.persistence.user;
 
 import com.minipay.domain.User;
 import com.minipay.domain.UserRepository;

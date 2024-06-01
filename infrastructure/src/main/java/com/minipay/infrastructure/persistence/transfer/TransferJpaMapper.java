@@ -1,4 +1,4 @@
-package com.minipay.infrastructure.persistence;
+package com.minipay.infrastructure.persistence.transfer;
 
 import com.minipay.domain.Transfer;
 

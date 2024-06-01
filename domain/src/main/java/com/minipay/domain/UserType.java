@@ -1,7 +1,6 @@
 package com.minipay.domain;
 
 import java.util.Arrays;
-import java.util.Optional;
 
 public enum UserType {
     SHOPKEEPER("lojista"),
@@ -17,9 +16,10 @@ public enum UserType {
         return type;
     }
 
-    public static Optional<UserType> of(String aType) {
+    public static UserType of(String aType) {
         return Arrays.stream(UserType.values())
                 .filter((t) -> t.type.equalsIgnoreCase(aType))
-                .findFirst();
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Invalid user type"));
     }
 }

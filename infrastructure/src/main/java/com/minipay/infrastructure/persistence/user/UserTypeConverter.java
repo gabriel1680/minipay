@@ -1,4 +1,4 @@
-package com.minipay.infrastructure.persistence;
+package com.minipay.infrastructure.persistence.user;
 
 import com.minipay.domain.UserType;
 import jakarta.persistence.AttributeConverter;
@@ -15,6 +15,6 @@ public class UserTypeConverter implements AttributeConverter<UserType, String> {
     @Override
     public UserType convertToEntityAttribute(final String s) {
         if (s == null) return null;
-        return UserType.of(s).orElse(null);
+        return UserType.of(s);
     }
 }

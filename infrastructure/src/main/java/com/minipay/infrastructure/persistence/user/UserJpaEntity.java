@@ -1,4 +1,4 @@
-package com.minipay.infrastructure.persistence;
+package com.minipay.infrastructure.persistence.user;
 
 import com.minipay.domain.UserType;
 import jakarta.persistence.*;

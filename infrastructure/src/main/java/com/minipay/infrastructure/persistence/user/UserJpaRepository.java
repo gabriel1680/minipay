@@ -1,4 +1,4 @@
-package com.minipay.infrastructure.persistence;
+package com.minipay.infrastructure.persistence.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
