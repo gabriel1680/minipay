@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61c0576-c7f7-4e20-8276-e6a62400fa14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/exception/ApplicationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/exception/EmailAlreadyTakenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/exception/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/DomainException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/InsufficientFundsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/ShopkeeperCannotPerformCreditException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/CreateUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/CreateUserUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/TransferUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/TransferUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/TransferAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/controller/UserAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateTransferRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateTransferRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/web/api/dto/CreateUserRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,54 +93,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build MiniPay.executor": "Run",
-    "Gradle.CommonUserTest.credit.executor": "Run",
-    "Gradle.CommonUserTest.debit.executor": "Run",
-    "Gradle.CommonUserTest.executor": "Run",
-    "Gradle.CreateUserUseCaseTest.execute.executor": "Run",
-    "Gradle.CreateUserUseCaseTest.executeWhenEmailExists.executor": "Run",
-    "Gradle.CreateUserUseCaseTest.executor": "Run",
-    "Gradle.MiniPay [bootJar].executor": "Run",
-    "Gradle.MiniPay [bootRun].executor": "Run",
-    "Gradle.MiniPay [clean].executor": "Run",
-    "Gradle.MiniPay [flywayBaseline].executor": "Run",
-    "Gradle.MiniPay [flywayClean].executor": "Run",
-    "Gradle.MiniPay [flywayInfo].executor": "Run",
-    "Gradle.MiniPay [flywayMigrate].executor": "Debug",
-    "Gradle.MiniPay [flywayRepair].executor": "Run",
-    "Gradle.MiniPay [flywayUndo].executor": "Run",
-    "Gradle.MiniPay:infrastructure [:infrastructure:Main.main()].executor": "Run",
-    "Gradle.ShopKeeperTest.executor": "Run",
-    "Gradle.TransactionServiceTest.executor": "Run",
-    "Gradle.TransferServiceTest.executor": "Run",
-    "Gradle.TransferUseCaseTest.execute.executor": "Run",
-    "Gradle.TransferUseCaseTest.executor": "Run",
-    "Gradle.UserTest.executor": "Run",
-    "Gradle.UserTest.factory.executor": "Run",
-    "Gradle.UserTest.getId.executor": "Run",
-    "Gradle.UserTest.newUser.executor": "Run",
-    "Gradle.WalletTest.credit.executor": "Run",
-    "Gradle.WalletTest.creditWithoutMoney.executor": "Run",
-    "Gradle.WalletTest.debit.executor": "Run",
-    "Gradle.WalletTest.executor": "Run",
-    "Gradle.WalletTest.newWallet.executor": "Run",
-    "Gradle.buildSrc [test].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "git-widget-placeholder": "master",
-    "java.suggest.annotation.dependency": "false",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/gabriellopes/Code/JavaProjects/MiniPay/infrastructure/src/main/resources/db/migration",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build MiniPay.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CommonUserTest.credit.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CommonUserTest.debit.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CommonUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CreateUserUseCaseTest.execute.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CreateUserUseCaseTest.executeWhenEmailExists.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CreateUserUseCaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [bootJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [bootRun].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [flywayBaseline].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [flywayClean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [flywayInfo].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [flywayMigrate].executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.MiniPay [flywayRepair].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay [flywayUndo].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MiniPay:infrastructure [:infrastructure:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ShopKeeperTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TransactionServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TransferServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TransferUseCaseTest.execute.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TransferUseCaseTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.factory.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.getId.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UserTest.newUser.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WalletTest.credit.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WalletTest.creditWithoutMoney.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WalletTest.debit.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WalletTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WalletTest.newWallet.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.buildSrc [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;java.suggest.annotation.dependency&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/gabriellopes/Code/JavaProjects/MiniPay/infrastructure/src/main/resources/db/migration&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/infrastructure/src/main/resources/db/migration" />

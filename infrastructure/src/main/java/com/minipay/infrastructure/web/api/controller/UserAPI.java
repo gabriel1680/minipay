@@ -4,6 +4,7 @@ import com.minipay.infrastructure.web.api.dto.CreateUserRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -24,5 +25,5 @@ public interface UserAPI {
             @ApiResponse(responseCode = "500", description = "Internal server error")
         }
     )
-    ResponseEntity<?> createUser(@RequestBody CreateUserRequest body);
+    ResponseEntity<?> createUser(@RequestBody @Valid CreateUserRequest body);
 }
