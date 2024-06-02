@@ -4,11 +4,6 @@ plugins {
 }
 
 group = 'com.minipay.application'
-version = 'unspecified'
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     implementation(project(':domain'))

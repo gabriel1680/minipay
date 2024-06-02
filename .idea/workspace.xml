@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61c0576-c7f7-4e20-8276-e6a62400fa14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/DomainEventRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/TransferUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/TransferUseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/MemoryEventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/event/MemoryEventDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/application/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/java-conventions.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/java-conventions.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +153,7 @@
       <recent name="com.minipay.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.TransferUseCaseTest">
+  <component name="RunManager" selected="Gradle.MiniPay [bootRun]">
     <configuration name="MiniPay [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -268,8 +270,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TransferUseCaseTest" />
         <item itemvalue="Gradle.MiniPay [bootRun]" />
+        <item itemvalue="Gradle.TransferUseCaseTest" />
         <item itemvalue="Gradle.MiniPay [flywayMigrate]" />
         <item itemvalue="Gradle.MiniPay [bootJar]" />
         <item itemvalue="Gradle.TransferUseCaseTest.execute" />
