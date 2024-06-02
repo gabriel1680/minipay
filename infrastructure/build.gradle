@@ -61,7 +61,7 @@ dependencies {
 
     // == tests ==
     // local
-    testImplementation(project(path: ':domain', configuration: 'testClasses'))
+    testImplementation(project(path: ':application', configuration: 'testClasses'))
 
     // spring
     testImplementation("org.springframework.boot:spring-boot-starter-test")
