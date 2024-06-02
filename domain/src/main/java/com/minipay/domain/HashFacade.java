@@ -38,8 +38,24 @@ public class HashFacade {
     public String hash(String password) {
         final var generator = new Argon2BytesGenerator();
         generator.init(parameters);
-        byte[] hash = new byte[32];
+        byte[] hash = createHash();
         generator.generateBytes(password.getBytes(StandardCharsets.UTF_8), hash, 0, hash.length);
+        return getEncodeToString(hash);
+    }
+
+    public boolean verify(String hash, String raw) {
+        Argon2BytesGenerator verifier = new Argon2BytesGenerator();
+        verifier.init(parameters);
+        byte[] testHash = createHash();
+        verifier.generateBytes(raw.getBytes(StandardCharsets.UTF_8), testHash, 0, testHash.length);
+        return getEncodeToString(testHash).equals(hash);
+    }
+
+    private byte[] createHash() {
+        return new byte[32];
+    }
+
+    private String getEncodeToString(final byte[] hash) {
         return Base64.getEncoder().encodeToString(hash);
     }
 }
