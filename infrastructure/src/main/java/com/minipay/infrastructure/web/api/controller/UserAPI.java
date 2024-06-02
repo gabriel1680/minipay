@@ -26,4 +26,16 @@ public interface UserAPI {
         }
     )
     ResponseEntity<?> createUser(@RequestBody @Valid CreateUserRequest body);
+
+    @GetMapping(
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    @ResponseStatus(HttpStatus.OK)
+    @Operation(summary = "Gets all users")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Success"),
+            @ApiResponse(responseCode = "500", description = "Internal server error")
+    }
+    )
+    ResponseEntity<?> getUsers();
 }
