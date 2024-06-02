@@ -35,8 +35,7 @@ class UserTest {
         assertEquals(sut.getDocument().type(), documentType);
         assertEquals(sut.getDocument().value(), documentValue);
         assertEquals(sut.getCredentials().email(), email);
-        // hashed
-        assertNotEquals(sut.getCredentials().password(), password);
+        assertEquals(sut.getCredentials().password(), password);
     }
 
     @Test
@@ -62,8 +61,7 @@ class UserTest {
         assertEquals(sut.getDocument().value(), documentValue);
         assertEquals(sut.getCredentials().email(), email);
         assertEquals(0, sut.getBalance().compareTo(BigDecimal.ZERO));
-        // hashed
-        assertNotEquals(sut.getCredentials().password(), password);
+        assertEquals(sut.getCredentials().password(), password);
     }
 
     @Test

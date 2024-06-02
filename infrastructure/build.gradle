@@ -34,10 +34,8 @@ dependencies {
     implementation("com.google.guava:guava:33.0.0-jre")
     implementation("com.fasterxml.jackson.module:jackson-module-afterburner")
 
-    implementation("io.github.resilience4j:resilience4j-spring-boot3")
-    implementation("io.github.resilience4j:resilience4j-bulkhead")
-    implementation("io.github.resilience4j:resilience4j-circuitbreaker")
-    implementation("io.github.resilience4j:resilience4j-retry")
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
+
 
     implementation("org.postgresql:postgresql")
 

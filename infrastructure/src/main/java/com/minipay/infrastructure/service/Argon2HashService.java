@@ -1,5 +1,6 @@
-package com.minipay.domain;
+package com.minipay.infrastructure.service;
 
+import com.minipay.application.service.HashService;
 import org.bouncycastle.crypto.generators.Argon2BytesGenerator;
 import org.bouncycastle.crypto.params.Argon2Parameters;
 
@@ -7,17 +8,13 @@ import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.Base64;
 
-public class HashFacade {
+public class Argon2HashService implements HashService {
 
     private final Argon2Parameters parameters;
 
-    public HashFacade(Argon2Parameters parameters) {
-        this.parameters = parameters;
-    }
-
-    public static HashFacade start() {
+    public Argon2HashService() {
         byte[] salt = getBytes();
-        final var parameters = new Argon2Parameters
+        parameters = new Argon2Parameters
                 .Builder(Argon2Parameters.ARGON2_VERSION_13)
                 .withParallelism(1)
                 .withIterations(2)
@@ -25,7 +22,6 @@ public class HashFacade {
                 .withVersion(1)
                 .withSalt(salt)
                 .build();
-        return new HashFacade(parameters);
     }
 
     private static byte[] getBytes() {

@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c61c0576-c7f7-4e20-8276-e6a62400fa14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/service/HashService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/src/test/java/com/minipay/infrastructure/service/Argon2HashServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/HashFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/HashFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/CreateUserUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/minipay/application/usecase/CreateUserUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/CreateUserUseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/minipay/application/CreateUserUseCaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/domain/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/HashFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/service/Argon2HashService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/UserCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/minipay/domain/user/UserCredentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/minipay/domain/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/UseCaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/src/main/java/com/minipay/infrastructure/configuration/UseCaseConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,15 +77,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Record" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JvmLoggingSettingsStorage">
+    <option name="loggerId" value="Slf4j" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -146,6 +158,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.minipay.infrastructure.service" />
       <recent name="com.minipay.application" />
       <recent name="com.minipay.domain" />
     </key>
@@ -274,10 +287,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UserTest" />
+        <item itemvalue="Gradle.CreateUserUseCaseTest" />
         <item itemvalue="Gradle.TransferServiceTest" />
         <item itemvalue="Gradle.UserTest.factory" />
         <item itemvalue="Gradle.CreateUserUseCaseTest.execute" />
-        <item itemvalue="Gradle.CreateUserUseCaseTest" />
       </list>
     </recent_temporary>
   </component>

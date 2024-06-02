@@ -1,6 +1,7 @@
 package com.minipay.application.usecase;
 
 import com.minipay.application.exception.EmailAlreadyTakenException;
+import com.minipay.application.service.HashService;
 import com.minipay.domain.user.User;
 import com.minipay.domain.user.UserRepository;
 
@@ -8,9 +9,11 @@ import java.util.Objects;
 
 public class CreateUserUseCase {
     final private UserRepository userRepository;
+    final private HashService hashService;
 
-    public CreateUserUseCase(UserRepository userRepository) {
+    public CreateUserUseCase(UserRepository userRepository, HashService hashService) {
         this.userRepository = Objects.requireNonNull(userRepository);
+        this.hashService = Objects.requireNonNull(hashService);
     }
 
     public void execute(Input input) {
@@ -25,7 +28,7 @@ public class CreateUserUseCase {
                 anInput.name(),
                 anInput.type(),
                 anInput.email(),
-                anInput.password(),
+                hashService.hash(anInput.password()),
                 anInput.documentType(),
                 anInput.documentValue()
         );

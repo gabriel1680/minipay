@@ -6,7 +6,6 @@ plugins {
 group = 'com.minipay.domain'
 
 dependencies {
-    implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
     testCompileOnly 'org.projectlombok:lombok:1.18.32'
 }
 

@@ -2,6 +2,7 @@ package com.minipay.application;
 
 import com.minipay.application.fixture.CreateUserInputBuilder;
 import com.minipay.application.fixture.MemoryUserRepository;
+import com.minipay.application.service.HashService;
 import com.minipay.application.usecase.CreateUserUseCase;
 import com.minipay.domain.fixture.UserBuilder;
 import org.junit.jupiter.api.Assertions;
@@ -16,7 +17,8 @@ class CreateUserUseCaseTest {
     @BeforeEach
     void setUp() {
         userRepository = new MemoryUserRepository();
-        sut = new CreateUserUseCase(userRepository);
+        final HashService hashService = password -> "hashed-fake-password";
+        sut = new CreateUserUseCase(userRepository, hashService);
     }
 
     @Test

@@ -3,6 +3,7 @@ package com.minipay.infrastructure.configuration;
 import com.minipay.application.handler.AuthorizeTransferHandler;
 import com.minipay.application.handler.SendTransferConfirmationHandler;
 import com.minipay.application.service.AuthorizationService;
+import com.minipay.application.service.HashService;
 import com.minipay.application.service.MailService;
 import com.minipay.application.usecase.CreateUserUseCase;
 import com.minipay.application.usecase.TransferUseCase;
@@ -21,18 +22,20 @@ public class UseCaseConfig {
     private final MemoryEventDispatcher dispatcher;
     private final AuthorizationService authorizationService;
     private final MailService mailService;
+    private final HashService hashService;
 
-    public UseCaseConfig(UserRepository userRepository, TransferRepository transferRepository, AuthorizationService authorizationService, MailService mailService) {
+    public UseCaseConfig(UserRepository userRepository, TransferRepository transferRepository, AuthorizationService authorizationService, MailService mailService, HashService hashService) {
         this.userRepository = Objects.requireNonNull(userRepository);
         this.transferRepository = Objects.requireNonNull(transferRepository);
         this.authorizationService = Objects.requireNonNull(authorizationService);
         this.mailService = Objects.requireNonNull(mailService);
+        this.hashService = Objects.requireNonNull(hashService);
         this.dispatcher = MemoryEventDispatcher.getInstance();
     }
 
     @Bean
     public CreateUserUseCase createUserUseCase() {
-        return new CreateUserUseCase(userRepository);
+        return new CreateUserUseCase(userRepository, hashService);
     }
 
     @Bean
