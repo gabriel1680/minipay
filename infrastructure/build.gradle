@@ -6,7 +6,6 @@ buildscript {
 
 plugins {
     id 'java-conventions'
-    id 'jacoco-report-aggregation'
     id 'application'
     id 'org.springframework.boot' version '3.2.2'
     id 'io.spring.dependency-management' version '1.1.4'
@@ -22,7 +21,6 @@ tasks.named("bootJar") {
 }
 
 ext {
-    cache2k = "2.6.1.Final"
     swagger = "1.6.8"
 }
 
@@ -33,47 +31,28 @@ dependencies {
 
     implementation("com.google.guava:guava:33.0.0-jre")
     implementation("com.fasterxml.jackson.module:jackson-module-afterburner")
-
     implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
-
-
     implementation("org.postgresql:postgresql")
 
-    // cache
-    implementation("org.cache2k:cache2k-api:$cache2k")
-    implementation("org.cache2k:cache2k-spring:$cache2k")
-    runtimeOnly("org.cache2k:cache2k-core:$cache2k")
-
-    // docs
-    implementation("org.springdoc:springdoc-openapi-webmvc-core:$swagger")
-    implementation("org.springdoc:springdoc-openapi-ui:$swagger")
-
-    // webserver - sub tomcat for undertow
+    // spring - sub tomcat for undertow
     implementation("org.springframework.boot:spring-boot-starter-web") {
         exclude module: 'spring-boot-starter-tomcat'
     }
     implementation("org.springframework.boot:spring-boot-starter-undertow")
-
     implementation("org.springframework.boot:spring-boot-starter-aop")
     implementation("org.springframework.boot:spring-boot-starter-cache")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springdoc:springdoc-openapi-webmvc-core:$swagger")
+    implementation("org.springdoc:springdoc-openapi-ui:$swagger")
 
     // == tests ==
-    // local
     testImplementation(project(path: ':application', configuration: 'testClasses'))
-
-    // spring
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.boot:spring-boot-testcontainers")
-
-    // flyway
     testImplementation('org.flywaydb:flyway-core')
-
-    // test container
     testImplementation("org.testcontainers:testcontainers:1.18.3")
     testImplementation("org.testcontainers:junit-jupiter:1.18.3")
-
     testRuntimeOnly('com.h2database:h2')
 }
 

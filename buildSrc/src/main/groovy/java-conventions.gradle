@@ -13,10 +13,8 @@ dependencies {
     implementation('org.yaml:snakeyaml:2.0') {
         version { strictly("2.0") }
     }
-
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testImplementation 'org.mockito:mockito-junit-jupiter:5.0.0'
-
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }
 
@@ -26,6 +24,12 @@ def testGroup = 'verification'
 
 tasks.named("test", Test) {
     useJUnitPlatform()
+
+    testLogging {
+        showStandardStreams = true
+        events = ['passed', 'failed', 'skipped']
+        exceptionFormat 'short'
+    }
 }
 
 tasks.register('unitTests', Test) {
