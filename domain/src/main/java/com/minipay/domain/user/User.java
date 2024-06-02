@@ -33,19 +33,14 @@ public class User extends Entity {
     }
 
     public void credit(BigDecimal aValue) {
-        if (balance.compareTo(aValue) < 0)
-            throw new RuntimeException("Invalid amount");
+        if (balance.compareTo(aValue) < 0) throw new InsufficientFundsException();
         if (type.equals(UserType.SHOPKEEPER))
-            throw new RuntimeException("A Shopkeeper is not allowed to perform a credit operation");
+            throw new ShopkeeperCannotPerformCreditException();
         balance = balance.subtract(aValue);
     }
 
     public void debit(BigDecimal aValue) {
         balance = balance.add(aValue);
-    }
-
-    public UUID getId() {
-        return id;
     }
 
     public String getName() {

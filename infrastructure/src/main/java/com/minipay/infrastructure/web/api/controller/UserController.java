@@ -25,11 +25,7 @@ public class UserController implements UserAPI {
                 body.documentType(),
                 body.documentValue()
         );
-        try {
-            this.createUserUseCase.execute(input);
-            return ResponseEntity.status(HttpStatus.CREATED).build();
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().build();
-        }
+        this.createUserUseCase.execute(input);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }

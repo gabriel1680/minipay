@@ -1,5 +1,6 @@
 package com.minipay.application.usecase;
 
+import com.minipay.application.exception.NotFoundException;
 import com.minipay.domain.event.DomainEventDispatcher;
 import com.minipay.domain.transfer.TransferRepository;
 import com.minipay.domain.TransferService;
@@ -23,8 +24,10 @@ public class TransferUseCase {
 
     @Transactional
     public void execute(final Input input) {
-        final var payee = userRepository.get(UUID.fromString(input.payeeId())).orElseThrow();
-        final var payer = userRepository.get(UUID.fromString(input.payerId())).orElseThrow();
+        final var payee = userRepository.get(UUID.fromString(input.payeeId()))
+                .orElseThrow(() -> new NotFoundException("Payee not found"));
+        final var payer = userRepository.get(UUID.fromString(input.payerId()))
+                .orElseThrow(() -> new NotFoundException("Payer not found"));
         final var transfer = TransferService.performDebitCredit(payer, payee, BigDecimal.valueOf(input.amount));
         userRepository.save(payee);
         userRepository.save(payer);

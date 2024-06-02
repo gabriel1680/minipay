@@ -22,11 +22,7 @@ public class TransferController implements TransferAPI {
                 aRequest.payeeId(),
                 aRequest.amount()
         );
-        try {
-            transferUseCase.execute(input);
-            return ResponseEntity.status(HttpStatus.CREATED).build();
-        } catch (RuntimeException e) {
-            return ResponseEntity.badRequest().build();
-        }
+        transferUseCase.execute(input);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }

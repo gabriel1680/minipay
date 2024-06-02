@@ -1,5 +1,6 @@
 package com.minipay.application.usecase;
 
+import com.minipay.application.exception.EmailAlreadyTakenException;
 import com.minipay.domain.user.User;
 import com.minipay.domain.user.UserRepository;
 
@@ -14,7 +15,7 @@ public class CreateUserUseCase {
 
     public void execute(Input input) {
         if (userRepository.exists(input.email))
-            throw new RuntimeException("Email already taken");
+            throw new EmailAlreadyTakenException(input.email);
         final var user = createUserFrom(input);
         userRepository.save(user);
     }
