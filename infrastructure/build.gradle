@@ -1,7 +1,4 @@
 buildscript {
-    repositories {
-        mavenCentral()
-    }
     dependencies {
         classpath "org.flywaydb:flyway-database-postgresql:10.11.0"
     }
@@ -21,7 +18,7 @@ group = 'com.minipay.infrastructure'
 tasks.named("bootJar") {
     enabled = true
     archiveFileName = "application.jar"
-    destinationDirectory = file("${rootProject.buildDir}/libs")
+    destinationDirectory = file("$rootDir/build/libs")
 }
 
 ext {

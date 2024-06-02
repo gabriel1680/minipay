@@ -10,7 +10,6 @@ repositories {
 
 dependencies {
     implementation 'io.vavr:vavr:0.10.4'
-
     implementation('org.yaml:snakeyaml:2.0') {
         version { strictly("2.0") }
     }
@@ -21,22 +20,36 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
 }
 
-tasks.named("test") {
+// Test Tasks
+
+def testGroup = 'verification'
+
+tasks.named("test", Test) {
     useJUnitPlatform()
 }
 
-task unitTests(type: Test, group: "verification") {
+tasks.register('unitTests', Test) {
+    group = testGroup
+    description = 'Runs all unit tests of project'
+
     useJUnitPlatform {
         includeTags("unitTest")
     }
 }
-task integrationTests(type: Test, group: "verification") {
+
+tasks.register('integrationTests', Test) {
+    group = testGroup
+    description = 'Runs all integration tests of project'
+
     useJUnitPlatform {
         includeTags("integrationTest")
     }
 }
 
-task e2eTests(type: Test, group: "verification") {
+tasks.register('e2eTests', Test) {
+    group = testGroup
+    description = 'Runs all e2e tests of project'
+
     useJUnitPlatform {
         includeTags("e2eTest")
     }

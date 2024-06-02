@@ -11,6 +11,7 @@ plugins {
 }
 
 rootProject.name = 'MiniPay'
+
 include 'application'
 include 'domain'
 include 'infrastructure'
