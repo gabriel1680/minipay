@@ -7,7 +7,7 @@ public class CreateUserInputBuilder {
 
     private String name = "John Doe";
     private String email = "john@doe.com";
-    private String type = UserType.COMMON.toString();
+    private String type = UserType.COMMON.getType();
     private String password = "123";
     private String documentType = "cpf";
     private String documentValue = "97088969009";

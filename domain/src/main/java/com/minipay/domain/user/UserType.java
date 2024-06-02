@@ -18,7 +18,7 @@ public enum UserType {
 
     public static UserType of(String aType) {
         return Arrays.stream(UserType.values())
-                .filter((t) -> t.type.equalsIgnoreCase(aType))
+                .filter((t) -> t.getType().equalsIgnoreCase(aType))
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("Invalid user type"));
     }
